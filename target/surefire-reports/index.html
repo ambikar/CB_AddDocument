@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-suite">
+              <span class="suite-name border-passed">suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-suite">
+                    <span>testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-suite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-suite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-suite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-suite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-suite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-suite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">34 methods,   34 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-suite" class="hide-methods passed suite-suite"> (hide)</a> <!-- hide-methods passed suite-suite -->
+                      <a href="#" panel-name="suite-suite" class="show-methods passed suite-suite"> (show)</a> <!-- show-methods passed suite-suite -->
+                    </span>
+                    <div class="method-list-content passed suite-suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="bulkInsert({
+    &quot;fruit&quot;: &quot;Apple&quot;,
+    &quot;size&quot;: &quot;Large&quot;,
+    &quot;color&quot;: &quot;Red&quot;
+}, bulk_id_, 3)">bulkInsert({
+    "fruit": "Apple",
+    "size": "Large",
+    "color": "Red"
+}, bulk_id_, 3)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="concurrentTest({
+	&quot;City&quot;: &quot;Santa Barbara&quot;,
+	&quot;Temperature&quot;: &quot;76 F&quot;
+}, doc_concurrent_4)">concurrentTest({
+	"City": "Santa Barbara",
+	"Temperature": "76 F"
+}, doc_concurrent_4)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="concurrentTest({
+	&quot;City&quot;: &quot;Santa Monica&quot;,
+	&quot;Temperature&quot;: &quot;74 F&quot;
+}, doc_concurrent_5)">concurrentTest({
+	"City": "Santa Monica",
+	"Temperature": "74 F"
+}, doc_concurrent_5)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="concurrentTest({
+	&quot;City&quot;: &quot;Santa Ana&quot;,
+	&quot;Temperature&quot;: &quot;72 F&quot;
+}, doc_concurrent_2)">concurrentTest({
+	"City": "Santa Ana",
+	"Temperature": "72 F"
+}, doc_concurrent_2)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="concurrentTest({
+	&quot;City&quot;: &quot;Santa Fe&quot;,
+	&quot;Temperature&quot;: &quot;78 F&quot;
+}, doc_concurrent_6)">concurrentTest({
+	"City": "Santa Fe",
+	"Temperature": "78 F"
+}, doc_concurrent_6)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="concurrentTest({
+	&quot;City&quot;: &quot;Santa Clara&quot;,
+	&quot;Temperature&quot;: &quot;70 F&quot;
+}, doc_concurrent_1)">concurrentTest({
+	"City": "Santa Clara",
+	"Temperature": "70 F"
+}, doc_concurrent_1)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="concurrentTest({
+	&quot;City&quot;: &quot;Santa Maria&quot;,
+	&quot;Temperature&quot;: &quot;79 F&quot;
+}, doc_concurrent_8)">concurrentTest({
+	"City": "Santa Maria",
+	"Temperature": "79 F"
+}, doc_concurrent_8)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="concurrentTest({
+	&quot;City&quot;: &quot;Santa Cruz&quot;,
+	&quot;Temperature&quot;: &quot;71 F&quot;
+}, doc_concurrent_3)">concurrentTest({
+	"City": "Santa Cruz",
+	"Temperature": "71 F"
+}, doc_concurrent_3)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="concurrentTest({
+	&quot;City&quot;: &quot;Santa Ana&quot;,
+	&quot;Temperature&quot;: &quot;72 F&quot;
+}, doc_concurrent_2)">concurrentTest({
+	"City": "Santa Ana",
+	"Temperature": "72 F"
+}, doc_concurrent_2)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="concurrentTest({
+	&quot;City&quot;: &quot;Santa Fe&quot;,
+	&quot;Temperature&quot;: &quot;78 F&quot;
+}, doc_concurrent_6)">concurrentTest({
+	"City": "Santa Fe",
+	"Temperature": "78 F"
+}, doc_concurrent_6)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="concurrentTest({
+	&quot;City&quot;: &quot;Santa Cruz&quot;,
+	&quot;Temperature&quot;: &quot;71 F&quot;
+}, doc_concurrent_3)">concurrentTest({
+	"City": "Santa Cruz",
+	"Temperature": "71 F"
+}, doc_concurrent_3)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="concurrentTest({
+	&quot;City&quot;: &quot;Santa Rosa&quot;,
+	&quot;Temperature&quot;: &quot;77 F&quot;
+}, doc_concurrent_7)">concurrentTest({
+	"City": "Santa Rosa",
+	"Temperature": "77 F"
+}, doc_concurrent_7)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="concurrentTest({
+	&quot;City&quot;: &quot;Santa Barbara&quot;,
+	&quot;Temperature&quot;: &quot;76 F&quot;
+}, doc_concurrent_4)">concurrentTest({
+	"City": "Santa Barbara",
+	"Temperature": "76 F"
+}, doc_concurrent_4)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="concurrentTest({
+	&quot;City&quot;: &quot;Santa Clara&quot;,
+	&quot;Temperature&quot;: &quot;70 F&quot;
+}, doc_concurrent_1)">concurrentTest({
+	"City": "Santa Clara",
+	"Temperature": "70 F"
+}, doc_concurrent_1)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="concurrentTest({
+	&quot;City&quot;: &quot;Santa Rosa&quot;,
+	&quot;Temperature&quot;: &quot;77 F&quot;
+}, doc_concurrent_7)">concurrentTest({
+	"City": "Santa Rosa",
+	"Temperature": "77 F"
+}, doc_concurrent_7)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="concurrentTest({
+	&quot;City&quot;: &quot;Santa Maria&quot;,
+	&quot;Temperature&quot;: &quot;79 F&quot;
+}, doc_concurrent_8)">concurrentTest({
+	"City": "Santa Maria",
+	"Temperature": "79 F"
+}, doc_concurrent_8)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="concurrentTest({
+	&quot;City&quot;: &quot;Santa Monica&quot;,
+	&quot;Temperature&quot;: &quot;74 F&quot;
+}, doc_concurrent_5)">concurrentTest({
+	"City": "Santa Monica",
+	"Temperature": "74 F"
+}, doc_concurrent_5)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="insertJsonFromFile">insertJsonFromFile</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.ClusterConnectionTest" hash-for-method="invalidConnection">invalidConnection</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="removeDocument">removeDocument</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.ClusterConnectionTest" hash-for-method="setUpConnectionTest">setUpConnectionTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="testAddWithExpiry({ 
+  &quot;first_name&quot;  :  &quot;Sammy&quot;, 
+  &quot;last_name&quot;   :  &quot;Dill&quot;, 
+  &quot;age&quot;      :  25 
+}, doc_exp1, 1)">testAddWithExpiry({ 
+  "first_name"  :  "Sammy", 
+  "last_name"   :  "Dill", 
+  "age"      :  25 
+}, doc_exp1, 1)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="testAsyncAddNewDoc({
+	&quot;employee&quot;: {
+		&quot;firstName&quot;: &quot;Tim&quot;,
+		&quot;lastName&quot;: &quot;Smith&quot;,
+		&quot;website&quot;: &quot;john.com&quot;
+	}
+}, doc_asyn...)">testAsyncAddNewDoc({
+	"employee": {
+		"firstName": "Tim",
+		"lastName": "Smith",
+		"website": "john.com"
+	}
+}, doc_asyn...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="testAsyncEmptyDoc">testAsyncEmptyDoc</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="testAsyncNonJsonDoc">testAsyncNonJsonDoc</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="testExpiredDoc">testExpiredDoc</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="testFileSize">testFileSize</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="testMaxCount">testMaxCount</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="testSyncAddExistingDoc({
+    &quot;City&quot;: &quot;Santa Clara&quot;,
+    &quot;Temperature&quot;: &quot;31 Degree celsius&quot;,
+    &quot;Humidity&quot;: &quot;58 Percent&quot;,
+ ...)">testSyncAddExistingDoc({
+    "City": "Santa Clara",
+    "Temperature": "31 Degree celsius",
+    "Humidity": "58 Percent",
+ ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="testSyncAddExistingDoc({
+	&quot;employee&quot;: {
+		&quot;firstName&quot;: &quot;John&quot;,
+		&quot;lastName&quot;: &quot;Smith&quot;,
+		&quot;website&quot;: &quot;john.com&quot;
+	}
+}, doc_5)">testSyncAddExistingDoc({
+	"employee": {
+		"firstName": "John",
+		"lastName": "Smith",
+		"website": "john.com"
+	}
+}, doc_5)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="testSyncAddNewDoc({
+	&quot;employee&quot;: {
+		&quot;firstName&quot;: &quot;John&quot;,
+		&quot;lastName&quot;: &quot;Smith&quot;,
+		&quot;website&quot;: &quot;john.com&quot;
+	}
+}, doc_5)">testSyncAddNewDoc({
+	"employee": {
+		"firstName": "John",
+		"lastName": "Smith",
+		"website": "john.com"
+	}
+}, doc_5)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="testSyncAddNewDoc({
+    &quot;City&quot;: &quot;Santa Clara&quot;,
+    &quot;Temperature&quot;: &quot;31 Degree celsius&quot;,
+    &quot;Humidity&quot;: &quot;58 Percent&quot;,
+ ...)">testSyncAddNewDoc({
+    "City": "Santa Clara",
+    "Temperature": "31 Degree celsius",
+    "Humidity": "58 Percent",
+ ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="testSyncEmptyDoc">testSyncEmptyDoc</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="cb.loadDoc.AddDocumentTest" hash-for-method="testSyncNonJsonDoc">testSyncNonJsonDoc</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-suite" class="panel suite">
+          <div class="suite-suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">cb.loadDoc.ClusterConnectionTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="invalidConnection">
+                  </a> <!-- invalidConnection -->
+                  <span class="method-name">invalidConnection</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="setUpConnectionTest">
+                  </a> <!-- setUpConnectionTest -->
+                  <span class="method-name">setUpConnectionTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-suite-class-passed -->
+          <div class="suite-suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">cb.loadDoc.AddDocumentTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="bulkInsert({
+    &quot;fruit&quot;: &quot;Apple&quot;,
+    &quot;size&quot;: &quot;Large&quot;,
+    &quot;color&quot;: &quot;Red&quot;
+}, bulk_id_, 3)">
+                  </a> <!-- bulkInsert({
+    "fruit": "Apple",
+    "size": "Large",
+    "color": "Red"
+}, bulk_id_, 3) -->
+                  <span class="method-name">bulkInsert</span>
+                  <span class="parameters">({
+    "fruit": "Apple",
+    "size": "Large",
+    "color": "Red"
+}, bulk_id_, 3)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="concurrentTest({
+	&quot;City&quot;: &quot;Santa Barbara&quot;,
+	&quot;Temperature&quot;: &quot;76 F&quot;
+}, doc_concurrent_4)">
+                  </a> <!-- concurrentTest({
+	"City": "Santa Barbara",
+	"Temperature": "76 F"
+}, doc_concurrent_4) -->
+                  <span class="method-name">concurrentTest</span>
+                  <span class="parameters">({
+	"City": "Santa Barbara",
+	"Temperature": "76 F"
+}, doc_concurrent_4)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="concurrentTest({
+	&quot;City&quot;: &quot;Santa Monica&quot;,
+	&quot;Temperature&quot;: &quot;74 F&quot;
+}, doc_concurrent_5)">
+                  </a> <!-- concurrentTest({
+	"City": "Santa Monica",
+	"Temperature": "74 F"
+}, doc_concurrent_5) -->
+                  <span class="method-name">concurrentTest</span>
+                  <span class="parameters">({
+	"City": "Santa Monica",
+	"Temperature": "74 F"
+}, doc_concurrent_5)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="concurrentTest({
+	&quot;City&quot;: &quot;Santa Ana&quot;,
+	&quot;Temperature&quot;: &quot;72 F&quot;
+}, doc_concurrent_2)">
+                  </a> <!-- concurrentTest({
+	"City": "Santa Ana",
+	"Temperature": "72 F"
+}, doc_concurrent_2) -->
+                  <span class="method-name">concurrentTest</span>
+                  <span class="parameters">({
+	"City": "Santa Ana",
+	"Temperature": "72 F"
+}, doc_concurrent_2)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="concurrentTest({
+	&quot;City&quot;: &quot;Santa Fe&quot;,
+	&quot;Temperature&quot;: &quot;78 F&quot;
+}, doc_concurrent_6)">
+                  </a> <!-- concurrentTest({
+	"City": "Santa Fe",
+	"Temperature": "78 F"
+}, doc_concurrent_6) -->
+                  <span class="method-name">concurrentTest</span>
+                  <span class="parameters">({
+	"City": "Santa Fe",
+	"Temperature": "78 F"
+}, doc_concurrent_6)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="concurrentTest({
+	&quot;City&quot;: &quot;Santa Clara&quot;,
+	&quot;Temperature&quot;: &quot;70 F&quot;
+}, doc_concurrent_1)">
+                  </a> <!-- concurrentTest({
+	"City": "Santa Clara",
+	"Temperature": "70 F"
+}, doc_concurrent_1) -->
+                  <span class="method-name">concurrentTest</span>
+                  <span class="parameters">({
+	"City": "Santa Clara",
+	"Temperature": "70 F"
+}, doc_concurrent_1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="concurrentTest({
+	&quot;City&quot;: &quot;Santa Maria&quot;,
+	&quot;Temperature&quot;: &quot;79 F&quot;
+}, doc_concurrent_8)">
+                  </a> <!-- concurrentTest({
+	"City": "Santa Maria",
+	"Temperature": "79 F"
+}, doc_concurrent_8) -->
+                  <span class="method-name">concurrentTest</span>
+                  <span class="parameters">({
+	"City": "Santa Maria",
+	"Temperature": "79 F"
+}, doc_concurrent_8)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="concurrentTest({
+	&quot;City&quot;: &quot;Santa Cruz&quot;,
+	&quot;Temperature&quot;: &quot;71 F&quot;
+}, doc_concurrent_3)">
+                  </a> <!-- concurrentTest({
+	"City": "Santa Cruz",
+	"Temperature": "71 F"
+}, doc_concurrent_3) -->
+                  <span class="method-name">concurrentTest</span>
+                  <span class="parameters">({
+	"City": "Santa Cruz",
+	"Temperature": "71 F"
+}, doc_concurrent_3)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="concurrentTest({
+	&quot;City&quot;: &quot;Santa Ana&quot;,
+	&quot;Temperature&quot;: &quot;72 F&quot;
+}, doc_concurrent_2)">
+                  </a> <!-- concurrentTest({
+	"City": "Santa Ana",
+	"Temperature": "72 F"
+}, doc_concurrent_2) -->
+                  <span class="method-name">concurrentTest</span>
+                  <span class="parameters">({
+	"City": "Santa Ana",
+	"Temperature": "72 F"
+}, doc_concurrent_2)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="concurrentTest({
+	&quot;City&quot;: &quot;Santa Fe&quot;,
+	&quot;Temperature&quot;: &quot;78 F&quot;
+}, doc_concurrent_6)">
+                  </a> <!-- concurrentTest({
+	"City": "Santa Fe",
+	"Temperature": "78 F"
+}, doc_concurrent_6) -->
+                  <span class="method-name">concurrentTest</span>
+                  <span class="parameters">({
+	"City": "Santa Fe",
+	"Temperature": "78 F"
+}, doc_concurrent_6)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="concurrentTest({
+	&quot;City&quot;: &quot;Santa Cruz&quot;,
+	&quot;Temperature&quot;: &quot;71 F&quot;
+}, doc_concurrent_3)">
+                  </a> <!-- concurrentTest({
+	"City": "Santa Cruz",
+	"Temperature": "71 F"
+}, doc_concurrent_3) -->
+                  <span class="method-name">concurrentTest</span>
+                  <span class="parameters">({
+	"City": "Santa Cruz",
+	"Temperature": "71 F"
+}, doc_concurrent_3)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="concurrentTest({
+	&quot;City&quot;: &quot;Santa Rosa&quot;,
+	&quot;Temperature&quot;: &quot;77 F&quot;
+}, doc_concurrent_7)">
+                  </a> <!-- concurrentTest({
+	"City": "Santa Rosa",
+	"Temperature": "77 F"
+}, doc_concurrent_7) -->
+                  <span class="method-name">concurrentTest</span>
+                  <span class="parameters">({
+	"City": "Santa Rosa",
+	"Temperature": "77 F"
+}, doc_concurrent_7)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="concurrentTest({
+	&quot;City&quot;: &quot;Santa Barbara&quot;,
+	&quot;Temperature&quot;: &quot;76 F&quot;
+}, doc_concurrent_4)">
+                  </a> <!-- concurrentTest({
+	"City": "Santa Barbara",
+	"Temperature": "76 F"
+}, doc_concurrent_4) -->
+                  <span class="method-name">concurrentTest</span>
+                  <span class="parameters">({
+	"City": "Santa Barbara",
+	"Temperature": "76 F"
+}, doc_concurrent_4)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="concurrentTest({
+	&quot;City&quot;: &quot;Santa Clara&quot;,
+	&quot;Temperature&quot;: &quot;70 F&quot;
+}, doc_concurrent_1)">
+                  </a> <!-- concurrentTest({
+	"City": "Santa Clara",
+	"Temperature": "70 F"
+}, doc_concurrent_1) -->
+                  <span class="method-name">concurrentTest</span>
+                  <span class="parameters">({
+	"City": "Santa Clara",
+	"Temperature": "70 F"
+}, doc_concurrent_1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="concurrentTest({
+	&quot;City&quot;: &quot;Santa Rosa&quot;,
+	&quot;Temperature&quot;: &quot;77 F&quot;
+}, doc_concurrent_7)">
+                  </a> <!-- concurrentTest({
+	"City": "Santa Rosa",
+	"Temperature": "77 F"
+}, doc_concurrent_7) -->
+                  <span class="method-name">concurrentTest</span>
+                  <span class="parameters">({
+	"City": "Santa Rosa",
+	"Temperature": "77 F"
+}, doc_concurrent_7)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="concurrentTest({
+	&quot;City&quot;: &quot;Santa Maria&quot;,
+	&quot;Temperature&quot;: &quot;79 F&quot;
+}, doc_concurrent_8)">
+                  </a> <!-- concurrentTest({
+	"City": "Santa Maria",
+	"Temperature": "79 F"
+}, doc_concurrent_8) -->
+                  <span class="method-name">concurrentTest</span>
+                  <span class="parameters">({
+	"City": "Santa Maria",
+	"Temperature": "79 F"
+}, doc_concurrent_8)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="concurrentTest({
+	&quot;City&quot;: &quot;Santa Monica&quot;,
+	&quot;Temperature&quot;: &quot;74 F&quot;
+}, doc_concurrent_5)">
+                  </a> <!-- concurrentTest({
+	"City": "Santa Monica",
+	"Temperature": "74 F"
+}, doc_concurrent_5) -->
+                  <span class="method-name">concurrentTest</span>
+                  <span class="parameters">({
+	"City": "Santa Monica",
+	"Temperature": "74 F"
+}, doc_concurrent_5)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="insertJsonFromFile">
+                  </a> <!-- insertJsonFromFile -->
+                  <span class="method-name">insertJsonFromFile</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="removeDocument">
+                  </a> <!-- removeDocument -->
+                  <span class="method-name">removeDocument</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddWithExpiry({ 
+  &quot;first_name&quot;  :  &quot;Sammy&quot;, 
+  &quot;last_name&quot;   :  &quot;Dill&quot;, 
+  &quot;age&quot;      :  25 
+}, doc_exp1, 1)">
+                  </a> <!-- testAddWithExpiry({ 
+  "first_name"  :  "Sammy", 
+  "last_name"   :  "Dill", 
+  "age"      :  25 
+}, doc_exp1, 1) -->
+                  <span class="method-name">testAddWithExpiry</span>
+                  <span class="parameters">({ 
+  "first_name"  :  "Sammy", 
+  "last_name"   :  "Dill", 
+  "age"      :  25 
+}, doc_exp1, 1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAsyncAddNewDoc({
+	&quot;employee&quot;: {
+		&quot;firstName&quot;: &quot;Tim&quot;,
+		&quot;lastName&quot;: &quot;Smith&quot;,
+		&quot;website&quot;: &quot;john.com&quot;
+	}
+}, doc_asyn...)">
+                  </a> <!-- testAsyncAddNewDoc({
+	"employee": {
+		"firstName": "Tim",
+		"lastName": "Smith",
+		"website": "john.com"
+	}
+}, doc_asyn...) -->
+                  <span class="method-name">testAsyncAddNewDoc</span>
+                  <span class="parameters">({
+	"employee": {
+		"firstName": "Tim",
+		"lastName": "Smith",
+		"website": "john.com"
+	}
+}, doc_async_1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAsyncEmptyDoc">
+                  </a> <!-- testAsyncEmptyDoc -->
+                  <span class="method-name">testAsyncEmptyDoc</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAsyncNonJsonDoc">
+                  </a> <!-- testAsyncNonJsonDoc -->
+                  <span class="method-name">testAsyncNonJsonDoc</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testExpiredDoc">
+                  </a> <!-- testExpiredDoc -->
+                  <span class="method-name">testExpiredDoc</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testFileSize">
+                  </a> <!-- testFileSize -->
+                  <span class="method-name">testFileSize</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testMaxCount">
+                  </a> <!-- testMaxCount -->
+                  <span class="method-name">testMaxCount</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSyncAddExistingDoc({
+    &quot;City&quot;: &quot;Santa Clara&quot;,
+    &quot;Temperature&quot;: &quot;31 Degree celsius&quot;,
+    &quot;Humidity&quot;: &quot;58 Percent&quot;,
+ ...)">
+                  </a> <!-- testSyncAddExistingDoc({
+    "City": "Santa Clara",
+    "Temperature": "31 Degree celsius",
+    "Humidity": "58 Percent",
+ ...) -->
+                  <span class="method-name">testSyncAddExistingDoc</span>
+                  <span class="parameters">({
+    "City": "Santa Clara",
+    "Temperature": "31 Degree celsius",
+    "Humidity": "58 Percent",
+    "WeatherDescription": "broken clouds",
+    "WindSpeed": "3.6 Km per hour",
+    "WindDirectionDegree": "90 Degree"
+}, doc_existing_1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSyncAddExistingDoc({
+	&quot;employee&quot;: {
+		&quot;firstName&quot;: &quot;John&quot;,
+		&quot;lastName&quot;: &quot;Smith&quot;,
+		&quot;website&quot;: &quot;john.com&quot;
+	}
+}, doc_5)">
+                  </a> <!-- testSyncAddExistingDoc({
+	"employee": {
+		"firstName": "John",
+		"lastName": "Smith",
+		"website": "john.com"
+	}
+}, doc_5) -->
+                  <span class="method-name">testSyncAddExistingDoc</span>
+                  <span class="parameters">({
+	"employee": {
+		"firstName": "John",
+		"lastName": "Smith",
+		"website": "john.com"
+	}
+}, doc_5)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSyncAddNewDoc({
+	&quot;employee&quot;: {
+		&quot;firstName&quot;: &quot;John&quot;,
+		&quot;lastName&quot;: &quot;Smith&quot;,
+		&quot;website&quot;: &quot;john.com&quot;
+	}
+}, doc_5)">
+                  </a> <!-- testSyncAddNewDoc({
+	"employee": {
+		"firstName": "John",
+		"lastName": "Smith",
+		"website": "john.com"
+	}
+}, doc_5) -->
+                  <span class="method-name">testSyncAddNewDoc</span>
+                  <span class="parameters">({
+	"employee": {
+		"firstName": "John",
+		"lastName": "Smith",
+		"website": "john.com"
+	}
+}, doc_5)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSyncAddNewDoc({
+    &quot;City&quot;: &quot;Santa Clara&quot;,
+    &quot;Temperature&quot;: &quot;31 Degree celsius&quot;,
+    &quot;Humidity&quot;: &quot;58 Percent&quot;,
+ ...)">
+                  </a> <!-- testSyncAddNewDoc({
+    "City": "Santa Clara",
+    "Temperature": "31 Degree celsius",
+    "Humidity": "58 Percent",
+ ...) -->
+                  <span class="method-name">testSyncAddNewDoc</span>
+                  <span class="parameters">({
+    "City": "Santa Clara",
+    "Temperature": "31 Degree celsius",
+    "Humidity": "58 Percent",
+    "WeatherDescription": "broken clouds",
+    "WindSpeed": "3.6 Km per hour",
+    "WindDirectionDegree": "90 Degree"
+}, doc_new_1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSyncEmptyDoc">
+                  </a> <!-- testSyncEmptyDoc -->
+                  <span class="method-name">testSyncEmptyDoc</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSyncNonJsonDoc">
+                  </a> <!-- testSyncNonJsonDoc -->
+                  <span class="method-name">testSyncNonJsonDoc</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-suite-class-passed -->
+        </div> <!-- panel suite -->
+        <div panel-name="test-xml-suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">/Users/arajagopalan/eclipse-workspace/loadDoc/testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite thread-count=&quot;1&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;suite&quot;&gt;
+  &lt;test thread-count=&quot;1&quot; verbose=&quot;0&quot; name=&quot;testCB&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;cb.loadDoc.ClusterConnectionTest&quot;/&gt;
+      &lt;class name=&quot;cb.loadDoc.AddDocumentTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- testCB --&gt;
+&lt;/suite&gt; &lt;!-- suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">testCB (2 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_suite');
+function tableData_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(34);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'testAddWithExpiry')
+data.setCell(0, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(0, 3, 5011);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testMaxCount')
+data.setCell(1, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(1, 3, 96);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'insertJsonFromFile')
+data.setCell(2, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(2, 3, 68);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'concurrentTest')
+data.setCell(3, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(3, 3, 11);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'removeDocument')
+data.setCell(4, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(4, 3, 10);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'invalidConnection')
+data.setCell(5, 2, 'cb.loadDoc.ClusterConnectionTest')
+data.setCell(5, 3, 10);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'concurrentTest')
+data.setCell(6, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(6, 3, 10);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'concurrentTest')
+data.setCell(7, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(7, 3, 9);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'concurrentTest')
+data.setCell(8, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(8, 3, 8);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'concurrentTest')
+data.setCell(9, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(9, 3, 7);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'concurrentTest')
+data.setCell(10, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(10, 3, 6);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'concurrentTest')
+data.setCell(11, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(11, 3, 6);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'testSyncAddExistingDoc')
+data.setCell(12, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(12, 3, 6);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'concurrentTest')
+data.setCell(13, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(13, 3, 6);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'concurrentTest')
+data.setCell(14, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(14, 3, 5);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'concurrentTest')
+data.setCell(15, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(15, 3, 5);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'concurrentTest')
+data.setCell(16, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(16, 3, 5);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'concurrentTest')
+data.setCell(17, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(17, 3, 5);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'concurrentTest')
+data.setCell(18, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(18, 3, 5);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'concurrentTest')
+data.setCell(19, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(19, 3, 5);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'concurrentTest')
+data.setCell(20, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(20, 3, 5);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'testExpiredDoc')
+data.setCell(21, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(21, 3, 5);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'concurrentTest')
+data.setCell(22, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(22, 3, 4);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'bulkInsert')
+data.setCell(23, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(23, 3, 4);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'testSyncAddNewDoc')
+data.setCell(24, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(24, 3, 3);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'testSyncAddExistingDoc')
+data.setCell(25, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(25, 3, 3);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'testSyncAddNewDoc')
+data.setCell(26, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(26, 3, 3);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'setUpConnectionTest')
+data.setCell(27, 2, 'cb.loadDoc.ClusterConnectionTest')
+data.setCell(27, 3, 2);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'testAsyncNonJsonDoc')
+data.setCell(28, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(28, 3, 1);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'testAsyncEmptyDoc')
+data.setCell(29, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(29, 3, 1);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'testFileSize')
+data.setCell(30, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(30, 3, 1);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'testSyncNonJsonDoc')
+data.setCell(31, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(31, 3, 1);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'testAsyncAddNewDoc')
+data.setCell(32, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(32, 3, 1);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'testSyncEmptyDoc')
+data.setCell(33, 2, 'cb.loadDoc.AddDocumentTest')
+data.setCell(33, 3, 1);
+window.suiteTableData['suite']= { tableData: data, tableDiv: 'times-div-suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
+              <div id="times-div-suite">
+              </div> <!-- times-div-suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">cb.loadDoc.ClusterConnectionTest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="test-method">
+                <span class="method-name">invalidConnection</span>
+                <span class="method-start">1367 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">setUpConnectionTest</span>
+                <span class="method-start">1380 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">cb.loadDoc.AddDocumentTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">1384 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">insertJsonFromFile</span>
+                <span class="method-start">1453 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testMaxCount</span>
+                <span class="method-start">1522 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSyncAddNewDoc({
+	"employee": {
+		"firstName": "John",
+		"lastName": "Smith",
+		"website": "john.com"
+	}
+}, doc_5)</span>
+                <span class="method-start">1625 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSyncAddNewDoc({
+    "City": "Santa Clara",
+    "Temperature": "31 Degree celsius",
+    "Humidity": "58 Percent",
+ ...)</span>
+                <span class="method-start">1628 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">bulkInsert({
+    "fruit": "Apple",
+    "size": "Large",
+    "color": "Red"
+}, bulk_id_, 3)</span>
+                <span class="method-start">1635 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">concurrentTest({
+	"City": "Santa Clara",
+	"Temperature": "70 F"
+}, doc_concurrent_1)</span>
+                <span class="method-start">1645 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">concurrentTest({
+	"City": "Santa Clara",
+	"Temperature": "70 F"
+}, doc_concurrent_1)</span>
+                <span class="method-start">1645 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">concurrentTest({
+	"City": "Santa Ana",
+	"Temperature": "72 F"
+}, doc_concurrent_2)</span>
+                <span class="method-start">1651 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">concurrentTest({
+	"City": "Santa Ana",
+	"Temperature": "72 F"
+}, doc_concurrent_2)</span>
+                <span class="method-start">1653 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">concurrentTest({
+	"City": "Santa Cruz",
+	"Temperature": "71 F"
+}, doc_concurrent_3)</span>
+                <span class="method-start">1657 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">concurrentTest({
+	"City": "Santa Cruz",
+	"Temperature": "71 F"
+}, doc_concurrent_3)</span>
+                <span class="method-start">1660 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">concurrentTest({
+	"City": "Santa Barbara",
+	"Temperature": "76 F"
+}, doc_concurrent_4)</span>
+                <span class="method-start">1662 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">concurrentTest({
+	"City": "Santa Barbara",
+	"Temperature": "76 F"
+}, doc_concurrent_4)</span>
+                <span class="method-start">1669 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">concurrentTest({
+	"City": "Santa Monica",
+	"Temperature": "74 F"
+}, doc_concurrent_5)</span>
+                <span class="method-start">1671 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">concurrentTest({
+	"City": "Santa Monica",
+	"Temperature": "74 F"
+}, doc_concurrent_5)</span>
+                <span class="method-start">1675 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">concurrentTest({
+	"City": "Santa Fe",
+	"Temperature": "78 F"
+}, doc_concurrent_6)</span>
+                <span class="method-start">1677 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">concurrentTest({
+	"City": "Santa Fe",
+	"Temperature": "78 F"
+}, doc_concurrent_6)</span>
+                <span class="method-start">1681 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">concurrentTest({
+	"City": "Santa Rosa",
+	"Temperature": "77 F"
+}, doc_concurrent_7)</span>
+                <span class="method-start">1683 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">concurrentTest({
+	"City": "Santa Rosa",
+	"Temperature": "77 F"
+}, doc_concurrent_7)</span>
+                <span class="method-start">1687 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">concurrentTest({
+	"City": "Santa Maria",
+	"Temperature": "79 F"
+}, doc_concurrent_8)</span>
+                <span class="method-start">1689 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">concurrentTest({
+	"City": "Santa Maria",
+	"Temperature": "79 F"
+}, doc_concurrent_8)</span>
+                <span class="method-start">1698 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testAddWithExpiry({ 
+  "first_name"  :  "Sammy", 
+  "last_name"   :  "Dill", 
+  "age"      :  25 
+}, doc_exp1, 1)</span>
+                <span class="method-start">1709 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testAsyncAddNewDoc({
+	"employee": {
+		"firstName": "Tim",
+		"lastName": "Smith",
+		"website": "john.com"
+	}
+}, doc_asyn...)</span>
+                <span class="method-start">6724 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testAsyncEmptyDoc</span>
+                <span class="method-start">6726 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testAsyncNonJsonDoc</span>
+                <span class="method-start">6728 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testExpiredDoc</span>
+                <span class="method-start">6730 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testFileSize</span>
+                <span class="method-start">6736 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSyncAddExistingDoc({
+	"employee": {
+		"firstName": "John",
+		"lastName": "Smith",
+		"website": "john.com"
+	}
+}, doc_5)</span>
+                <span class="method-start">6740 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSyncAddExistingDoc({
+    "City": "Santa Clara",
+    "Temperature": "31 Degree celsius",
+    "Humidity": "58 Percent",
+ ...)</span>
+                <span class="method-start">6746 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSyncEmptyDoc</span>
+                <span class="method-start">6750 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSyncNonJsonDoc</span>
+                <span class="method-start">6752 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">removeDocument</span>
+                <span class="method-start">6755 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">cb.loadDoc.ClusterConnectionTest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">6813 ms</span>
+              </div> <!-- configuration-suite after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

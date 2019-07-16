@@ -1,0 +1,936 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="34" passed="34" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2019-07-16T18:58:10Z" name="suite" finished-at="2019-07-16T18:58:16Z" duration-ms="5573">
+    <groups>
+    </groups>
+    <test started-at="2019-07-16T18:58:10Z" name="testCB" finished-at="2019-07-16T18:58:16Z" duration-ms="5573">
+      <class name="cb.loadDoc.AddDocumentTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:10Z" name="setUp" finished-at="2019-07-16T18:58:11Z" duration-ms="70" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="bulkInsert(java.lang.String, java.lang.String, int)[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:11Z" name="bulkInsert" data-provider="bulkInsert" finished-at="2019-07-16T18:58:11Z" duration-ms="27" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{
+    "fruit": "Apple",
+    "size": "Large",
+    "color": "Red"
+}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[bulk_id_]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bulkInsert -->
+        <test-method signature="testAsyncAddNewDoc(java.lang.String, java.lang.String)[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:11Z" name="testAsyncAddNewDoc" data-provider="asyncNewDocList" finished-at="2019-07-16T18:58:11Z" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{
+"employee": {
+"firstName": "Tim",
+"lastName": "Smith",
+"website": "john.com"
+}
+}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[doc_async_1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAsyncAddNewDoc -->
+        <test-method signature="testAsyncNonJsonDoc()[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:11Z" name="testAsyncNonJsonDoc" finished-at="2019-07-16T18:58:11Z" duration-ms="7" status="PASS">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Cannot convert string to JsonObject]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Cannot convert string to JsonObject
+at com.couchbase.client.java.document.json.JsonObject.fromJson(JsonObject.java:190)
+at cb.loadDoc.AddDocument.asyncInsert(AddDocument.java:60)
+at cb.loadDoc.AddDocumentTest.testAsyncNonJsonDoc(AddDocumentTest.java:148)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.couchbase.client.deps.com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'test': was expecting 'null', 'true', 'false' or NaN
+ at [Source: (String)"test"; line: 1, column: 9]
+at com.couchbase.client.deps.com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1804)
+at com.couchbase.client.deps.com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:679)
+at com.couchbase.client.deps.com.fasterxml.jackson.core.json.ReaderBasedJsonParser._reportInvalidToken(ReaderBasedJsonParser.java:2839)
+at com.couchbase.client.deps.com.fasterxml.jackson.core.json.ReaderBasedJsonParser._reportInvalidToken(ReaderBasedJsonParser.java:2817)
+at com.couchbase.client.deps.com.fasterxml.jackson.core.json.ReaderBasedJsonParser._matchToken2(ReaderBasedJsonParser.java:2622)
+at com.couchbase.client.deps.com.fasterxml.jackson.core.json.ReaderBasedJsonParser._matchToken(ReaderBasedJsonParser.java:2600)
+at com.couchbase.client.deps.com.fasterxml.jackson.core.json.ReaderBasedJsonParser._matchTrue(ReaderBasedJsonParser.java:2558)
+at com.couchbase.client.deps.com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:717)
+at com.couchbase.client.deps.com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:4141)
+at com.couchbase.client.deps.com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4000)
+at com.couchbase.client.deps.com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3004)
+at com.couchbase.client.java.transcoder.JsonTranscoder.stringToJsonObject(JsonTranscoder.java:80)
+at com.couchbase.client.java.document.json.JsonObject.fromJson(JsonObject.java:188)
+... 27 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAsyncNonJsonDoc -->
+        <test-method signature="testExpiredDoc()[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:11Z" name="testExpiredDoc" finished-at="2019-07-16T18:58:11Z" duration-ms="17" status="PASS">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at cb.loadDoc.AddDocument.getDocument(AddDocument.java:97)
+at cb.loadDoc.AddDocumentTest.testExpiredDoc(AddDocumentTest.java:77)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExpiredDoc -->
+        <test-method signature="testFileSize()[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:11Z" name="testFileSize" finished-at="2019-07-16T18:58:11Z" duration-ms="4" status="PASS">
+          <exception class="com.couchbase.client.java.error.RequestTooBigException">
+            <full-stacktrace>
+              <![CDATA[com.couchbase.client.java.error.RequestTooBigException
+at cb.loadDoc.AddDocumentTest.testFileSize(AddDocumentTest.java:118)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.couchbase.client.java.error.RequestTooBigException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFileSize -->
+        <test-method signature="testSyncAddExistingDoc(java.lang.String, java.lang.String)[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:11Z" name="testSyncAddExistingDoc" data-provider="syncExistingDocList" finished-at="2019-07-16T18:58:11Z" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{
+"employee": {
+"firstName": "John",
+"lastName": "Smith",
+"website": "john.com"
+}
+}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[doc_5]]>
+              </value>
+            </param>
+          </params>
+          <exception class="com.couchbase.client.java.error.DocumentAlreadyExistsException">
+            <full-stacktrace>
+              <![CDATA[com.couchbase.client.java.error.DocumentAlreadyExistsException
+at com.couchbase.client.java.bucket.api.Mutate$1$1.call(Mutate.java:154)
+at com.couchbase.client.java.bucket.api.Mutate$1$1.call(Mutate.java:132)
+at rx.internal.operators.OnSubscribeMap$MapSubscriber.onNext(OnSubscribeMap.java:69)
+at rx.observers.Subscribers$5.onNext(Subscribers.java:235)
+at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onNext(OnSubscribeDoOnEach.java:101)
+at rx.internal.producers.SingleProducer.request(SingleProducer.java:65)
+at rx.internal.producers.ProducerArbiter.setProducer(ProducerArbiter.java:126)
+at rx.internal.operators.OnSubscribeTimeoutTimedWithFallback$TimeoutMainSubscriber.setProducer(OnSubscribeTimeoutTimedWithFallback.java:155)
+at rx.Subscriber.setProducer(Subscriber.java:205)
+at rx.internal.operators.OnSubscribeMap$MapSubscriber.setProducer(OnSubscribeMap.java:102)
+at rx.Subscriber.setProducer(Subscriber.java:205)
+at rx.Subscriber.setProducer(Subscriber.java:205)
+at rx.subjects.AsyncSubject.onCompleted(AsyncSubject.java:103)
+at com.couchbase.client.core.endpoint.AbstractGenericHandler.completeResponse(AbstractGenericHandler.java:508)
+at com.couchbase.client.core.endpoint.AbstractGenericHandler.access$000(AbstractGenericHandler.java:86)
+at com.couchbase.client.core.endpoint.AbstractGenericHandler$1.call(AbstractGenericHandler.java:526)
+at rx.internal.schedulers.ScheduledAction.run(ScheduledAction.java:55)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:299)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: rx.exceptions.OnErrorThrowable$OnNextValue: OnError while emitting onNext value: com.couchbase.client.core.message.kv.InsertResponse.class
+at rx.exceptions.OnErrorThrowable.addValueAsLastCause(OnErrorThrowable.java:118)
+at rx.internal.operators.OnSubscribeMap$MapSubscriber.onNext(OnSubscribeMap.java:73)
+... 20 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.couchbase.client.java.error.DocumentAlreadyExistsException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSyncAddExistingDoc -->
+        <test-method signature="testSyncAddExistingDoc(java.lang.String, java.lang.String)[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:11Z" name="testSyncAddExistingDoc" data-provider="syncExistingDocList" finished-at="2019-07-16T18:58:11Z" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{
+    "City": "Santa Clara",
+    "Temperature": "31 Degree celsius",
+    "Humidity": "58 Percent",
+    "WeatherDescription": "broken clouds",
+    "WindSpeed": "3.6 Km per hour",
+    "WindDirectionDegree": "90 Degree"
+}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[doc_existing_1]]>
+              </value>
+            </param>
+          </params>
+          <exception class="com.couchbase.client.java.error.DocumentAlreadyExistsException">
+            <full-stacktrace>
+              <![CDATA[com.couchbase.client.java.error.DocumentAlreadyExistsException
+at com.couchbase.client.java.bucket.api.Mutate$1$1.call(Mutate.java:154)
+at com.couchbase.client.java.bucket.api.Mutate$1$1.call(Mutate.java:132)
+at rx.internal.operators.OnSubscribeMap$MapSubscriber.onNext(OnSubscribeMap.java:69)
+at rx.observers.Subscribers$5.onNext(Subscribers.java:235)
+at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onNext(OnSubscribeDoOnEach.java:101)
+at rx.internal.producers.SingleProducer.request(SingleProducer.java:65)
+at rx.internal.producers.ProducerArbiter.setProducer(ProducerArbiter.java:126)
+at rx.internal.operators.OnSubscribeTimeoutTimedWithFallback$TimeoutMainSubscriber.setProducer(OnSubscribeTimeoutTimedWithFallback.java:155)
+at rx.Subscriber.setProducer(Subscriber.java:205)
+at rx.internal.operators.OnSubscribeMap$MapSubscriber.setProducer(OnSubscribeMap.java:102)
+at rx.Subscriber.setProducer(Subscriber.java:205)
+at rx.Subscriber.setProducer(Subscriber.java:205)
+at rx.subjects.AsyncSubject.onCompleted(AsyncSubject.java:103)
+at com.couchbase.client.core.endpoint.AbstractGenericHandler.completeResponse(AbstractGenericHandler.java:508)
+at com.couchbase.client.core.endpoint.AbstractGenericHandler.access$000(AbstractGenericHandler.java:86)
+at com.couchbase.client.core.endpoint.AbstractGenericHandler$1.call(AbstractGenericHandler.java:526)
+at rx.internal.schedulers.ScheduledAction.run(ScheduledAction.java:55)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:299)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: rx.exceptions.OnErrorThrowable$OnNextValue: OnError while emitting onNext value: com.couchbase.client.core.message.kv.InsertResponse.class
+at rx.exceptions.OnErrorThrowable.addValueAsLastCause(OnErrorThrowable.java:118)
+at rx.internal.operators.OnSubscribeMap$MapSubscriber.onNext(OnSubscribeMap.java:73)
+... 20 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.couchbase.client.java.error.DocumentAlreadyExistsException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSyncAddExistingDoc -->
+        <test-method signature="testSyncAddNewDoc(java.lang.String, java.lang.String)[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:11Z" name="testSyncAddNewDoc" data-provider="syncNewDocList" finished-at="2019-07-16T18:58:11Z" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{
+"employee": {
+"firstName": "John",
+"lastName": "Smith",
+"website": "john.com"
+}
+}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[doc_5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSyncAddNewDoc -->
+        <test-method signature="testSyncAddNewDoc(java.lang.String, java.lang.String)[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:11Z" name="testSyncAddNewDoc" data-provider="syncNewDocList" finished-at="2019-07-16T18:58:11Z" duration-ms="7" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{
+    "City": "Santa Clara",
+    "Temperature": "31 Degree celsius",
+    "Humidity": "58 Percent",
+    "WeatherDescription": "broken clouds",
+    "WindSpeed": "3.6 Km per hour",
+    "WindDirectionDegree": "90 Degree"
+}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[doc_new_1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSyncAddNewDoc -->
+        <test-method signature="concurrentTest(java.lang.String, java.lang.String)[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:11Z" name="concurrentTest" data-provider="concurrentInsert" finished-at="2019-07-16T18:58:11Z" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{
+"City": "Santa Clara",
+"Temperature": "70 F"
+}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[doc_concurrent_1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- concurrentTest -->
+        <test-method signature="concurrentTest(java.lang.String, java.lang.String)[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:11Z" name="concurrentTest" data-provider="concurrentInsert" finished-at="2019-07-16T18:58:11Z" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{
+"City": "Santa Clara",
+"Temperature": "70 F"
+}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[doc_concurrent_1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- concurrentTest -->
+        <test-method signature="concurrentTest(java.lang.String, java.lang.String)[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:11Z" name="concurrentTest" data-provider="concurrentInsert" finished-at="2019-07-16T18:58:11Z" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{
+"City": "Santa Ana",
+"Temperature": "72 F"
+}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[doc_concurrent_2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- concurrentTest -->
+        <test-method signature="concurrentTest(java.lang.String, java.lang.String)[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:11Z" name="concurrentTest" data-provider="concurrentInsert" finished-at="2019-07-16T18:58:11Z" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{
+"City": "Santa Ana",
+"Temperature": "72 F"
+}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[doc_concurrent_2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- concurrentTest -->
+        <test-method signature="concurrentTest(java.lang.String, java.lang.String)[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:11Z" name="concurrentTest" data-provider="concurrentInsert" finished-at="2019-07-16T18:58:11Z" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{
+"City": "Santa Cruz",
+"Temperature": "71 F"
+}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[doc_concurrent_3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- concurrentTest -->
+        <test-method signature="concurrentTest(java.lang.String, java.lang.String)[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:11Z" name="concurrentTest" data-provider="concurrentInsert" finished-at="2019-07-16T18:58:11Z" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{
+"City": "Santa Cruz",
+"Temperature": "71 F"
+}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[doc_concurrent_3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- concurrentTest -->
+        <test-method signature="concurrentTest(java.lang.String, java.lang.String)[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:11Z" name="concurrentTest" data-provider="concurrentInsert" finished-at="2019-07-16T18:58:11Z" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{
+"City": "Santa Barbara",
+"Temperature": "76 F"
+}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[doc_concurrent_4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- concurrentTest -->
+        <test-method signature="concurrentTest(java.lang.String, java.lang.String)[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:11Z" name="concurrentTest" data-provider="concurrentInsert" finished-at="2019-07-16T18:58:11Z" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{
+"City": "Santa Barbara",
+"Temperature": "76 F"
+}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[doc_concurrent_4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- concurrentTest -->
+        <test-method signature="concurrentTest(java.lang.String, java.lang.String)[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:11Z" name="concurrentTest" data-provider="concurrentInsert" finished-at="2019-07-16T18:58:11Z" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{
+"City": "Santa Monica",
+"Temperature": "74 F"
+}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[doc_concurrent_5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- concurrentTest -->
+        <test-method signature="concurrentTest(java.lang.String, java.lang.String)[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:11Z" name="concurrentTest" data-provider="concurrentInsert" finished-at="2019-07-16T18:58:11Z" duration-ms="7" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{
+"City": "Santa Monica",
+"Temperature": "74 F"
+}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[doc_concurrent_5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- concurrentTest -->
+        <test-method signature="concurrentTest(java.lang.String, java.lang.String)[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:11Z" name="concurrentTest" data-provider="concurrentInsert" finished-at="2019-07-16T18:58:11Z" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{
+"City": "Santa Fe",
+"Temperature": "78 F"
+}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[doc_concurrent_6]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- concurrentTest -->
+        <test-method signature="concurrentTest(java.lang.String, java.lang.String)[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:11Z" name="concurrentTest" data-provider="concurrentInsert" finished-at="2019-07-16T18:58:11Z" duration-ms="7" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{
+"City": "Santa Fe",
+"Temperature": "78 F"
+}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[doc_concurrent_6]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- concurrentTest -->
+        <test-method signature="concurrentTest(java.lang.String, java.lang.String)[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:11Z" name="concurrentTest" data-provider="concurrentInsert" finished-at="2019-07-16T18:58:11Z" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{
+"City": "Santa Rosa",
+"Temperature": "77 F"
+}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[doc_concurrent_7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- concurrentTest -->
+        <test-method signature="concurrentTest(java.lang.String, java.lang.String)[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:11Z" name="concurrentTest" data-provider="concurrentInsert" finished-at="2019-07-16T18:58:11Z" duration-ms="7" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{
+"City": "Santa Rosa",
+"Temperature": "77 F"
+}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[doc_concurrent_7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- concurrentTest -->
+        <test-method signature="concurrentTest(java.lang.String, java.lang.String)[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:11Z" name="concurrentTest" data-provider="concurrentInsert" finished-at="2019-07-16T18:58:11Z" duration-ms="7" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{
+"City": "Santa Maria",
+"Temperature": "79 F"
+}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[doc_concurrent_8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- concurrentTest -->
+        <test-method signature="concurrentTest(java.lang.String, java.lang.String)[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:11Z" name="concurrentTest" data-provider="concurrentInsert" finished-at="2019-07-16T18:58:11Z" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{
+"City": "Santa Maria",
+"Temperature": "79 F"
+}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[doc_concurrent_8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- concurrentTest -->
+        <test-method signature="insertJsonFromFile()[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:11Z" name="insertJsonFromFile" finished-at="2019-07-16T18:58:11Z" duration-ms="35" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertJsonFromFile -->
+        <test-method signature="testAddWithExpiry(java.lang.String, java.lang.String, int)[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:11Z" name="testAddWithExpiry" data-provider="newDocWithExp" finished-at="2019-07-16T18:58:16Z" duration-ms="5010" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{ 
+  "first_name"  :  "Sammy", 
+  "last_name"   :  "Dill", 
+  "age"      :  25 
+}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[doc_exp1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddWithExpiry -->
+        <test-method signature="testAsyncEmptyDoc()[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:16Z" name="testAsyncEmptyDoc" finished-at="2019-07-16T18:58:16Z" duration-ms="5" status="PASS">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Cannot convert string to JsonObject]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Cannot convert string to JsonObject
+at com.couchbase.client.java.document.json.JsonObject.fromJson(JsonObject.java:190)
+at cb.loadDoc.AddDocument.asyncInsert(AddDocument.java:60)
+at cb.loadDoc.AddDocumentTest.testAsyncEmptyDoc(AddDocumentTest.java:140)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.NullPointerException
+at com.couchbase.client.deps.com.fasterxml.jackson.core.JsonFactory.createParser(JsonFactory.java:889)
+at com.couchbase.client.deps.com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3004)
+at com.couchbase.client.java.transcoder.JsonTranscoder.stringToJsonObject(JsonTranscoder.java:80)
+at com.couchbase.client.java.document.json.JsonObject.fromJson(JsonObject.java:188)
+... 27 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAsyncEmptyDoc -->
+        <test-method signature="testMaxCount()[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:16Z" name="testMaxCount" finished-at="2019-07-16T18:58:16Z" duration-ms="145" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMaxCount -->
+        <test-method signature="testSyncEmptyDoc()[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:16Z" name="testSyncEmptyDoc" finished-at="2019-07-16T18:58:16Z" duration-ms="3" status="PASS">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Cannot convert string to JsonObject]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Cannot convert string to JsonObject
+at com.couchbase.client.java.document.json.JsonObject.fromJson(JsonObject.java:190)
+at cb.loadDoc.AddDocument.insertDocument(AddDocument.java:39)
+at cb.loadDoc.AddDocumentTest.testSyncEmptyDoc(AddDocumentTest.java:54)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.couchbase.client.deps.com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
+ at [Source: (String)""; line: 1, column: 0]
+at com.couchbase.client.deps.com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:59)
+at com.couchbase.client.deps.com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:4145)
+at com.couchbase.client.deps.com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4000)
+at com.couchbase.client.deps.com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3004)
+at com.couchbase.client.java.transcoder.JsonTranscoder.stringToJsonObject(JsonTranscoder.java:80)
+at com.couchbase.client.java.document.json.JsonObject.fromJson(JsonObject.java:188)
+... 27 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSyncEmptyDoc -->
+        <test-method signature="testSyncNonJsonDoc()[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:16Z" name="testSyncNonJsonDoc" finished-at="2019-07-16T18:58:16Z" duration-ms="6" status="PASS">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Cannot convert string to JsonObject]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Cannot convert string to JsonObject
+at com.couchbase.client.java.document.json.JsonObject.fromJson(JsonObject.java:190)
+at cb.loadDoc.AddDocument.insertDocument(AddDocument.java:39)
+at cb.loadDoc.AddDocumentTest.testSyncNonJsonDoc(AddDocumentTest.java:62)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.couchbase.client.deps.com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'test': was expecting 'null', 'true', 'false' or NaN
+ at [Source: (String)"test"; line: 1, column: 9]
+at com.couchbase.client.deps.com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1804)
+at com.couchbase.client.deps.com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:679)
+at com.couchbase.client.deps.com.fasterxml.jackson.core.json.ReaderBasedJsonParser._reportInvalidToken(ReaderBasedJsonParser.java:2839)
+at com.couchbase.client.deps.com.fasterxml.jackson.core.json.ReaderBasedJsonParser._reportInvalidToken(ReaderBasedJsonParser.java:2817)
+at com.couchbase.client.deps.com.fasterxml.jackson.core.json.ReaderBasedJsonParser._matchToken2(ReaderBasedJsonParser.java:2622)
+at com.couchbase.client.deps.com.fasterxml.jackson.core.json.ReaderBasedJsonParser._matchToken(ReaderBasedJsonParser.java:2600)
+at com.couchbase.client.deps.com.fasterxml.jackson.core.json.ReaderBasedJsonParser._matchTrue(ReaderBasedJsonParser.java:2558)
+at com.couchbase.client.deps.com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:717)
+at com.couchbase.client.deps.com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:4141)
+at com.couchbase.client.deps.com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4000)
+at com.couchbase.client.deps.com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3004)
+at com.couchbase.client.java.transcoder.JsonTranscoder.stringToJsonObject(JsonTranscoder.java:80)
+at com.couchbase.client.java.document.json.JsonObject.fromJson(JsonObject.java:188)
+... 27 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSyncNonJsonDoc -->
+        <test-method signature="removeDocument()[pri:0, instance:cb.loadDoc.AddDocumentTest@5f16132a]" started-at="2019-07-16T18:58:16Z" name="removeDocument" finished-at="2019-07-16T18:58:16Z" depends-on-methods="cb.loadDoc.AddDocumentTest.testSyncAddNewDoc" duration-ms="19" status="PASS">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at cb.loadDoc.AddDocument.getDocument(AddDocument.java:97)
+at cb.loadDoc.AddDocumentTest.removeDocument(AddDocumentTest.java:85)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeDocument -->
+      </class> <!-- cb.loadDoc.AddDocumentTest -->
+      <class name="cb.loadDoc.ClusterConnectionTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cb.loadDoc.ClusterConnectionTest@dd0c991]" started-at="2019-07-16T18:58:09Z" name="setUp" finished-at="2019-07-16T18:58:10Z" duration-ms="1706" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="invalidConnection()[pri:0, instance:cb.loadDoc.ClusterConnectionTest@dd0c991]" started-at="2019-07-16T18:58:10Z" name="invalidConnection" finished-at="2019-07-16T18:58:10Z" duration-ms="22" status="PASS">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Bucket name is not allowed to be null or empty.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Bucket name is not allowed to be null or empty.
+at com.couchbase.client.java.CouchbaseCluster.openBucket(CouchbaseCluster.java:285)
+at com.couchbase.client.java.CouchbaseCluster.openBucket(CouchbaseCluster.java:274)
+at com.couchbase.client.java.CouchbaseCluster.openBucket(CouchbaseCluster.java:269)
+at cb.loadDoc.ClusterConnection.setBucket(ClusterConnection.java:33)
+at cb.loadDoc.ClusterConnection.openConnection(ClusterConnection.java:42)
+at cb.loadDoc.ClusterConnectionTest.invalidConnection(ClusterConnectionTest.java:40)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidConnection -->
+        <test-method signature="setUpConnectionTest()[pri:0, instance:cb.loadDoc.ClusterConnectionTest@dd0c991]" started-at="2019-07-16T18:58:10Z" name="setUpConnectionTest" finished-at="2019-07-16T18:58:10Z" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpConnectionTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cb.loadDoc.ClusterConnectionTest@dd0c991]" started-at="2019-07-16T18:58:16Z" name="tearDown" finished-at="2019-07-16T18:58:16Z" duration-ms="52" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- cb.loadDoc.ClusterConnectionTest -->
+    </test> <!-- testCB -->
+  </suite> <!-- suite -->
+</testng-results>

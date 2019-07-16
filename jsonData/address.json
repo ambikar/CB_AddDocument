@@ -1,0 +1,17 @@
+{
+	"employee": {
+		"firstName": "Mike",
+		"lastName": "King",
+		"address": [{
+				"street": "Test Dr",
+				"city": "Freso",
+				"state": "CA"
+			},
+			{
+				"street": "Bell St",
+				"city": "San Pedro",
+				"state": "CA"
+			}
+		]
+	}
+}

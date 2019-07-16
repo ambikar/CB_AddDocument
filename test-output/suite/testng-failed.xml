@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="1" name="testCB(failed)">
+    <classes>
+      <class name="cb.loadDoc.AddDocumentTest">
+        <methods>
+          <include name="testFileSize"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- cb.loadDoc.AddDocumentTest -->
+    </classes>
+  </test> <!-- testCB(failed) -->
+</suite> <!-- Failed suite [suite] -->
