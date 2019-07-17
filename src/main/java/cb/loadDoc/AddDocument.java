@@ -19,6 +19,8 @@ import com.couchbase.client.java.query.N1qlQuery;
 import com.couchbase.client.java.query.N1qlQueryResult;
 import com.couchbase.client.java.query.N1qlQueryRow;
 
+
+
 import rx.Observable;
 import rx.functions.Func1;
 
