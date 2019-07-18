@@ -19,7 +19,7 @@ import com.couchbase.client.java.query.N1qlQuery;
 import com.couchbase.client.java.query.N1qlQueryResult;
 import com.couchbase.client.java.query.N1qlQueryRow;
 
-
+//code for adding new doc to CB server
 
 import rx.Observable;
 import rx.functions.Func1;
