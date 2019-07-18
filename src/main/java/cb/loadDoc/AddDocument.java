@@ -24,6 +24,7 @@ import com.couchbase.client.java.query.N1qlQueryRow;
 import rx.Observable;
 import rx.functions.Func1;
 
+//class to add new doc
 public class AddDocument extends ClusterConnection {
 
 	Bucket bucket;
