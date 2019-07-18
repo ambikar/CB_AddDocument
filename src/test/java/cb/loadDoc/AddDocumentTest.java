@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import com.couchbase.client.java.Bucket;
 import com.couchbase.client.java.error.DocumentAlreadyExistsException;
 import com.couchbase.client.java.error.RequestTooBigException;
-
+//test cases for addig new doc
 public class AddDocumentTest {
 
 	AddDocument addDoc;
