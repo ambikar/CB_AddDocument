@@ -9,6 +9,8 @@ import com.couchbase.client.java.Cluster;
 import com.couchbase.client.java.CouchbaseCluster;
 import com.couchbase.client.java.error.BucketDoesNotExistException;
 
+//class to create a new clusterconnection
+
 public class ClusterConnection {
 
 	Cluster cluster;
