@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 
 import com.couchbase.client.java.Bucket;
 
+//test connection
 public class ClusterConnectionTest {
 
 	ClusterConnection conn;
